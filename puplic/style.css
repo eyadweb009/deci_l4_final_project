@@ -1,0 +1,120 @@
+nav {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  padding: 30px;
+}
+
+nav li a{
+  text-decoration: none;
+  padding: 10px;
+  color:rgb(255, 136, 0);
+  font-size: 20px
+}
+
+nav li {
+  list-style: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns:repeat(3 , 1fr);
+  grid-template-rows: auto;
+  gap: 90px;
+  padding-top: 50px;
+}
+
+.product_1 { 
+  text-align: center;
+  border: solid 5px rgb(255, 136, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product_2 {
+  text-align: center;
+  border: solid 5px rgb(255, 136, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product_3 {
+  text-align: center;
+  border: solid 5px rgb(255, 136, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product_4 {
+  text-align: center;
+  border: solid 5px rgb(255, 136, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product_5 {
+  text-align: center;
+  border: solid 5px rgb(255, 136, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product_6 {
+  text-align: center;
+  border: solid 5px rgb(255, 136, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product_7 {
+  text-align: center;
+  border: solid 5px rgb(255, 136, 0);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.button {
+  border: solid 2px black;
+  border: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  background: linear-gradient(
+    -45deg,
+    #ffffff,
+    #fff7ed,
+    #ffe8cc,
+    #ffd8a8,
+    #ffb86b,
+    #ff9f43,
+    #ffd8a8,
+    #fff7ed,
+    #ffffff
+  );
+
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
