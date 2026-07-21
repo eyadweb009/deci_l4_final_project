@@ -39,6 +39,9 @@ A full-backend systam that can handle post delete update and read operations wit
 ├── package-lock.json
 └── server.js
 
+## note
+- and i didint do anything in services because repititive code is almost 0.
+
 ### Backend
 - Node.js
 - Express.js
@@ -70,3 +73,9 @@ A full-backend systam that can handle post delete update and read operations wit
 
 ## for seeding:
 - run node seed.js to load products.
+
+## my git commits :
+- i made a single initial ccommit to my website and uploaded it to my github repo
+
+## github :
+- [View the project on GitHub](https://github.com/eyadweb009/deci_l4_final_project)
