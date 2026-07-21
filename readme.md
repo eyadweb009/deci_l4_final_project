@@ -13,9 +13,8 @@ A full-backend systam that can handle post delete update and read operations wit
 - seeding
 
 ## pproject structure
-  FINAL_PROJECT_DECI_L4/
+FINAL_PROJECT_DECI_L4/
 │
-├── node_modules/
 │
 ├── public/
 │ ├── index.html
