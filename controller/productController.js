@@ -22,9 +22,9 @@ export const addNewProducts = async (req, res) => {
     const new_product = await product.create({
       user_name,
       name,
-      price: req.body.price,
+      price,
       offer_description,
-      catgory: category
+      category
     });
 
     res.status(201).json(new_product);
