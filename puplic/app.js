@@ -8,7 +8,7 @@ loginButtons.forEach((button) => {
 const productsContainer = document.querySelector(".products");
 
 async function getProducts() {
-  if (!productsContainer) return; 
+  if (!productsContainer) return;
 
   try {
     const res = await fetch("/products");
@@ -54,7 +54,9 @@ async function getProducts() {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            id: Math.floor(Math.random() * 100000), 
+            id: Math.floor(Math.random() * 100000),
+            name: targetProduct.name,
+            quantity: 1,
             price: targetProduct.price,
             category: targetProduct.category,
             user_name: targetProduct.user_name
@@ -92,6 +94,8 @@ async function getCart() {
         <div class="cart-item">
           <h3>user :${item.user_name || 'N/A'}</h3>
           <h3>id :${item.id}</h3>
+          <h3>product :${item.name}</h3>
+          <p>quantity :${item.quantity}</p>
           <p>price :${item.price} EGP</p>
           <p>category :${item.category}</p>
           <button class="remove-cart-btn" data-id="${item._id}">Delete</button>

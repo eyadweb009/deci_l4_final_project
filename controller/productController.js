@@ -1,4 +1,4 @@
-import product from '../models/product.js'
+import product from '../models/product.js';
 
 export const getMyProducts = async (req, res) => {
   try {
@@ -7,9 +7,9 @@ export const getMyProducts = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-};  
+};
 
-export const addNewProducts = async (req,res)=> {
+export const addNewProducts = async (req, res) => {
   try {
     const {
       user_name,
@@ -22,21 +22,21 @@ export const addNewProducts = async (req,res)=> {
     const new_product = await product.create({
       user_name,
       name,
-      price,
+      price: req.body.price,
       offer_description,
-      category
+      catgory: category
     });
 
     res.status(201).json(new_product);
 
   } catch (error) {
-    res.status(500).json({error: error.message});
+    res.status(500).json({ error: error.message });
   }
 };
 
 export const updateProduct = async (req, res) => {
   const { id } = req.params;
-  const {user_name, name, price, offer_description, category } = req.body;
+  const { user_name, name, price, offer_description, category } = req.body;
 
   const updatedProduct = await product.findByIdAndUpdate(
     id,
@@ -53,8 +53,8 @@ export const updateProduct = async (req, res) => {
   res.json(updatedProduct);
 };
 
-export const deleteProduct =  async (req,res) => {
-  const {id} = req.params
+export const deleteProduct = async (req, res) => {
+  const { id } = req.params;
   const deletedProduct = await product.findByIdAndDelete(id);
   res.json(deletedProduct);
-}
+};
